@@ -7,15 +7,13 @@ import android.content.Context;
  */
 public class SwitchOnCommand implements Command {
 
-    private Context context;
     private Connection connection;
 
-    public SwitchOnCommand(Context context, Connection connection) {
+    public SwitchOnCommand(Connection connection) {
         this.connection = connection;
-        this.context = context;
     }
 
     public void execute() {
-        connection.switchOn(context);
+        connection.switchOn();
     }
 }

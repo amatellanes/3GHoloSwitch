@@ -7,16 +7,14 @@ import android.content.Context;
  */
 public class SwitchOffCommand implements Command {
 
-    private Context context;
     private Connection connection;
 
-    public SwitchOffCommand(Context context, Connection connection) {
+    public SwitchOffCommand(Connection connection) {
         this.connection = connection;
-        this.context = context;
     }
 
     public void execute() {
-        connection.switchOff(context);
+        connection.switchOff();
     }
 
 }
